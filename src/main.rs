@@ -53,7 +53,11 @@ fn main() {
     if content.len() % 2 == 0 {
         let mut out = vec![0; content.len() / 2];//指定向量的长度
         let decoded = hex::decode_to_slice(content, &mut out).expect("Decoding failed");
-        println!("{:X?}", out);//以16进制显示
+        //遍历向量成员
+        for i in  out.iter() {
+            print!("0x{:02X?} ",i);//以16进制显示 0x
+        }
+        
         //println!("{:?}", decoded);
         fs::write("../test.bin", out).unwrap();//将处理后二进制数据写入文件中
         } else {
