@@ -1,5 +1,7 @@
 # rust-by-example
-This person is lazy and left nothing
+//This person is lazy and left nothing
+**
+**
 fn main(){
   println!("Hello world!");
 }
