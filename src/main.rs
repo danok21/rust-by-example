@@ -14,7 +14,7 @@ fn main() {
 
     let decoded = hex::decode_to_slice(input,  &mut out).expect("Decoding failed");
     println!("{:X?}",out);
-    fs::write("../test.txt", out).unwrap();
+    fs::write("../test.bin", out).unwrap();
 }
 */
 
@@ -34,7 +34,7 @@ fn main() {
     println!("{:X?}",out);
     //println!("{:?}", decoded);
 
-    fs::write("../test.txt", out).unwrap();
+    fs::write("../test.bin", out).unwrap();
 }
 */
 
@@ -55,7 +55,7 @@ fn main() {
         let decoded = hex::decode_to_slice(content, &mut out).expect("Decoding failed");
         println!("{:X?}", out);//以16进制显示
         //println!("{:?}", decoded);
-        fs::write("../test.txt", out).unwrap();//将处理后二进制数据写入文件中
+        fs::write("../test.bin", out).unwrap();//将处理后二进制数据写入文件中
         } else {
         print!("Data in the source file is purely a problem！");//错误打印提示信息
     }
